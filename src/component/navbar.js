@@ -137,9 +137,10 @@ export default function Navbar() {
             <MailIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        <p>My Card</p>
+        <p>RS1.022</p>
       </MenuItem>
-      <p>RS1.022</p>
+
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <Badge badgeContent={11} color="secondary">
