@@ -16,48 +16,58 @@ const useStyles = makeStyles({
     height: 140,
   },
   line: {
-    display: "flex",
-    justifyContent: "space-between",
+    display: "grid",
   },
 });
 
 export const Cards = () => {
   const classes = useStyles();
-  const animals = [
-    { id: 1, animal: "Dog" },
-    { id: 2, animal: "Bird" },
-    { id: 3, animal: "Cat" },
-    { id: 4, animal: "Dog" },
-    { id: 5, animal: "Bird" },
-  ];
 
   return (
-    <div className={classes.line}>
-      {animals.map((item) => (
-        <div key={item.id}>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="https://cdn.shopify.com/s/files/1/0143/1552/0054/products/161-9512-b_360x.jpg?
+    <Typography contained="div" className={classes.line}>
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image="https://cdn.shopify.com/s/files/1/0143/1552/0054/products/161-9512-b_360x.jpg?
           v=1586895688"
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Bubble Scart Kid
-                </Typography>
-                <Typography>Rs: 10.00</Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" variant="contained" color="secondary">
-                Add To Card
-              </Button>
-            </CardActions>
-          </Card>
-        </div>
-      ))}
-    </div>
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              Bubble Scart Kid
+            </Typography>
+            <Typography>Rs: 10.00</Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" variant="contained" color="secondary">
+            Add To Card
+          </Button>
+        </CardActions>
+      </Card>
+      {/* 2nd */}
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image="https://cdn.shopify.com/s/files/1/0143/1552/0054/products/161-9512-b_360x.jpg?
+          v=1586895688"
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              Bubble Scart Kid
+            </Typography>
+            <Typography>Rs: 10.00</Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" variant="contained" color="secondary">
+            Add To Card
+          </Button>
+        </CardActions>
+      </Card>
+    </Typography>
   );
 };
