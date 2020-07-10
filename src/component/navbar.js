@@ -17,7 +17,6 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import HomeIcon from "@material-ui/icons/Home";
 import Button from "@material-ui/core/Button";
 import { Routes, Route, useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 import { Cards } from "./card";
 
 const useStyles = makeStyles((theme) => ({
