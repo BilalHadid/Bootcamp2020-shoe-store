@@ -5,7 +5,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
-import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -18,6 +17,8 @@ import HomeIcon from "@material-ui/icons/Home";
 import Button from "@material-ui/core/Button";
 import { Routes, Route, useNavigate } from "react-router";
 import { Cards } from "./card";
+import { Home } from "./Home";
+import SignInSide from "./SignIn";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -128,7 +129,7 @@ export default function Navbar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={() => Navigate("/signin")}>Sign In</MenuItem>
     </Menu>
   );
 
@@ -168,12 +169,15 @@ export default function Navbar() {
       </MenuItem>
 
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Products</p>
+        <Button
+          variant="text"
+          color="primary"
+          className={classes.Mobilebutton}
+          startIcon={<NotificationsIcon />}
+          onClick={() => Navigate("/products")}
+        >
+          Products
+        </Button>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -247,8 +251,9 @@ export default function Navbar() {
               color="primary"
               className={classes.button}
               startIcon={<NotificationsIcon />}
+              onClick={() => Navigate("/products")}
             >
-              Notification
+              Products
             </Button>
             <IconButton
               edge="end"
@@ -278,8 +283,10 @@ export default function Navbar() {
       {renderMenu}
 
       <Routes>
-        <Route path="/" element={<Cards />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Cards />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/signin" element={<SignInSide />} />
       </Routes>
     </div>
   );
