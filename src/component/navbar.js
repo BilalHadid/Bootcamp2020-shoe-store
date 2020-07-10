@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     color: "white",
   },
+  Mobilebutton: {
+    margin: theme.spacing(1),
+    color: "#494949",
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -140,21 +144,27 @@ export default function Navbar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge color="secondary">
-            <HomeIcon />
-          </Badge>
-        </IconButton>
-        <p>Home</p>
+        <Button
+          variant="text"
+          color="primary"
+          className={classes.Mobilebutton}
+          startIcon={<HomeIcon />}
+          onClick={() => Navigate("/")}
+        >
+          Home
+        </Button>
       </MenuItem>
       {/* 3rd */}
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>My Card</p>
+        <Button
+          variant="text"
+          color="primary"
+          className={classes.Mobilebutton}
+          startIcon={<MailIcon />}
+          onClick={() => Navigate("/home")}
+        >
+          My Card
+        </Button>
       </MenuItem>
 
       <MenuItem>
@@ -163,7 +173,7 @@ export default function Navbar() {
             <NotificationsIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>Products</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -217,7 +227,7 @@ export default function Navbar() {
               color="primary"
               className={classes.button}
               startIcon={<HomeIcon />}
-              onClick={() => Navigate("/card")}
+              onClick={() => Navigate("/")}
             >
               Home
             </Button>
@@ -268,7 +278,7 @@ export default function Navbar() {
       {renderMenu}
 
       <Routes>
-        <Route path="card" element={<Cards />} />
+        <Route path="/" element={<Cards />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
