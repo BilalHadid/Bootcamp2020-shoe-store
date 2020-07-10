@@ -11,13 +11,22 @@ import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/LocalMallOutlined";
+import MailIcon from "@material-ui/icons/LocalMall";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import HomeIcon from "@material-ui/icons/Home";
+import Button from "@material-ui/core/Button";
+import { Routes, Route, useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+import { Cards } from "./card";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
+  },
+  button: {
+    margin: theme.spacing(1),
+    color: "white",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -133,12 +142,20 @@ export default function Navbar() {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          <Badge color="secondary">
+            <HomeIcon />
+          </Badge>
+        </IconButton>
+        <p>Home</p>
+      </MenuItem>
+      {/* 3rd */}
+      <MenuItem>
+        <IconButton aria-label="show 4 new mails" color="inherit">
+          <Badge color="secondary">
             <MailIcon />
           </Badge>
         </IconButton>
         <p>My Card</p>
-        <p>RS1.022</p>
       </MenuItem>
 
       <MenuItem>
@@ -162,7 +179,10 @@ export default function Navbar() {
       </MenuItem>
     </Menu>
   );
-
+  function NotFound() {
+    return <div>Not Found</div>;
+  }
+  const Navigate = useNavigate();
   return (
     <div className={classes.grow}>
       <AppBar position="static">
@@ -175,15 +195,15 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Shoe-Store
+          <Typography className={classes.title} variant="img" noWrap>
+            Shoe Store
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Search..."
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
@@ -193,16 +213,34 @@ export default function Navbar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+            <Button
+              variant="text"
+              color="primary"
+              className={classes.button}
+              startIcon={<HomeIcon />}
+              onClick={() => Navigate("/card")}
+            >
+              Home
+            </Button>
+
+            <Button
+              variant="text"
+              color="primary"
+              className={classes.button}
+              startIcon={<MailIcon />}
+              onClick={() => Navigate("/home")}
+            >
+              Rs 0.00
+            </Button>
+
+            <Button
+              variant="text"
+              color="primary"
+              className={classes.button}
+              startIcon={<NotificationsIcon />}
+            >
+              Notification
+            </Button>
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -229,6 +267,11 @@ export default function Navbar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+
+      <Routes>
+        <Route path="card" element={<Cards />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
