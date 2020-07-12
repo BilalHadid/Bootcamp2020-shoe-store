@@ -7,7 +7,14 @@
   background-attachment: fixed;
   background-size: cover;
 }
-
+.Home1 {
+  background-image: url(https://cdn.hipwallpaper.com/i/75/42/JSa7wE.jpg);
+  display: flex;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
