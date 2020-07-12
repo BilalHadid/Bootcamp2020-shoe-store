@@ -97,6 +97,11 @@ export const Home = () => {
           </CardActionArea>
         </Card>
       </div>
+      <br />
+      <div>
+        <h2>LATEST COLLECTION</h2>
+        <hr></hr>
+      </div>
     </div>
   );
 };

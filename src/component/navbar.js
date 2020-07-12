@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
+import Badge from "@material-ui/core/Badge";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/LocalMall";
@@ -173,6 +173,7 @@ export default function Navbar() {
           variant="text"
           color="primary"
           className={classes.Mobilebutton}
+          badgeContent={0}
           startIcon={<NotificationsIcon />}
           onClick={() => Navigate("/products")}
         >
@@ -200,14 +201,6 @@ export default function Navbar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar style={{ backgroundColor: "#223565" }}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography className={classes.title} variant="button" noWrap>
             Shoe Store
           </Typography>
@@ -265,6 +258,7 @@ export default function Navbar() {
               Find A Store
             </Button>
             <IconButton
+              badgeContent={4}
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -272,7 +266,9 @@ export default function Navbar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <Badge badgeContent={0}>
+                <AccountCircle />
+              </Badge>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
