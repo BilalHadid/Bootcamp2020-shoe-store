@@ -29,7 +29,10 @@ export const Home = () => {
       <div className="Home1">
         <div className="Main">
           <h1>Casual Sport Shoes</h1>
-          <h1 className={classes.line}></h1>
+          <p className={classes.line}></p>
+          <p>
+            <span>Lorem Ipsum dolor</span> sit amet Concecature
+          </p>
         </div>
       </div>
       <Card className={classes.root}>
