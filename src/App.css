@@ -8,11 +8,10 @@
   background-size: cover;
 }
 .Home1 {
-  background-image: url(https://cdn.hipwallpaper.com/i/75/42/JSa7wE.jpg);
+  /* background-image: url(https://images.pexels.com/photos/293406/pexels-photo-293406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); */
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding-left: 25px;
   text-transform: uppercase;
 
   min-height: 100vh;

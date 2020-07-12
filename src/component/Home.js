@@ -1,57 +1,35 @@
 import React from "react";
+import { Zoom } from "react-slideshow-image";
 import "../App.css";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
+import "react-slideshow-image/dist/styles.css";
+import img1 from "./images/bilal.jpg";
+import img2 from "./images/img2.jpeg";
+import img3 from "./images/img3.jpeg";
+import img4 from "./images/img4.jpeg";
+import img5 from "./images/backImg.jpg";
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-    border: "2px",
-  },
-  media: {
-    height: 190,
-  },
-  line: {
-    borderTop: "1px solid white",
-    width: "10%",
-    marginLeft: "15vh",
-  },
-});
-
+const zoomOutProperties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  scale: 0.4,
+  arrows: true,
+};
+const images = [img1, img2, img3, img4, img5];
 export const Home = () => {
-  const classes = useStyles();
   return (
-    <div>
-      <div className="Home1">
-        <div className="Main">
-          <h1>Casual Sport Shoes</h1>
-          <p className={classes.line}></p>
-          <p>
-            <span>Lorem Ipsum dolor</span> sit amet Concecature
-          </p>
-        </div>
-      </div>
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardContent style={{ textAlign: "center" }}>
-            <Typography gutterBottom variant="h5" component="h2">
-              Bought From
-            </Typography>
-            <Typography variant="h5" style={{ color: "red" }}>
-              Islamabad
-            </Typography>
-          </CardContent>
-          <CardMedia
-            className={classes.media}
-            image="https://cdn.shopify.com/s/files/1/0143/1552/0054/products/681-2162-c_2400x.jpg?v=1569390463"
-            title="Contemplative Reptile"
+    <div className="slide-container">
+      <Zoom {...zoomOutProperties}>
+        {images.map((each, index) => (
+          <img
+            key={index}
+            style={{ width: "100%", height: "85vh" }}
+            src={each}
+            alt={index}
           />
-        </CardActionArea>
-      </Card>
+        ))}
+      </Zoom>
     </div>
   );
 };

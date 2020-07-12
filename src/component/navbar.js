@@ -199,7 +199,7 @@ export default function Navbar() {
   return (
     <div className={classes.grow}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar style={{ backgroundColor: "#223565" }}>
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -208,7 +208,7 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="img" noWrap>
+          <Typography className={classes.title} variant="button" noWrap>
             Shoe Store
           </Typography>
           <div className={classes.search}>
@@ -254,6 +254,15 @@ export default function Navbar() {
               onClick={() => Navigate("/products")}
             >
               Products
+            </Button>
+            <Button
+              variant="text"
+              color="primary"
+              className={classes.button}
+              startIcon={<HomeIcon />}
+              onClick={() => Navigate("/")}
+            >
+              Home
             </Button>
             <IconButton
               edge="end"
