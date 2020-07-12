@@ -57,3 +57,9 @@
     transform: rotate(360deg);
   }
 }
+.cardGender {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}

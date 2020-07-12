@@ -262,7 +262,7 @@ export default function Navbar() {
               startIcon={<HomeIcon />}
               onClick={() => Navigate("/")}
             >
-              Home
+              Find A Store
             </Button>
             <IconButton
               edge="end"
