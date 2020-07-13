@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Zoom } from "react-slideshow-image";
 import "../App.css";
 import "react-slideshow-image/dist/styles.css";
@@ -15,11 +15,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
-import Switch from "@material-ui/core/Switch";
-import Paper from "@material-ui/core/Paper";
-import Zooms from "@material-ui/core/Zoom";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -27,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     flex: "0 0 300px",
   },
   media: {
-    height: 140,
+    height: 180,
   },
   container: {
     display: "flex",
@@ -35,14 +30,10 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     margin: theme.spacing(1),
   },
-  svg: {
-    width: 100,
-    height: 100,
-  },
+  svg: {},
   polygon: {
-    fill: theme.palette.common.white,
-    stroke: theme.palette.divider,
-    strokeWidth: 1,
+    width: "100%",
+    height: "30vh",
   },
 }));
 
@@ -57,11 +48,6 @@ const zoomOutProperties = {
 const images = [img1, img2, img3, img4, img5, img6];
 export const Home = () => {
   const classes = useStyles();
-  const [checked, setChecked] = useState(false);
-
-  const handleChange = () => {
-    setChecked((prev) => !prev);
-  };
 
   return (
     <div>
@@ -127,37 +113,27 @@ export const Home = () => {
       <div>
         <h2>LATEST COLLECTION</h2>
         <hr></hr>
-        <div className={classes.root}>
-          <FormControlLabel
-            control={<Switch checked={checked} onChange={handleChange} />}
-            label="Show"
-          />
-          <div className={classes.container}>
-            <Zooms in={checked}>
-              <Paper elevation={4} className={classes.paper}>
-                <svg className={classes.svg}>
-                  <polygon
-                    points="0,100 50,00, 100,100"
-                    className={classes.polygon}
-                  />
-                </svg>
-              </Paper>
-            </Zooms>
-            <Zooms
-              in={checked}
-              style={{ transitionDelay: checked ? "500ms" : "0ms" }}
-            >
-              <Paper elevation={4} className={classes.paper}>
-                <svg className={classes.svg}>
-                  <polygon
-                    points="0,100 50,00, 100,100"
-                    className={classes.polygon}
-                  />
-                </svg>
-              </Paper>
-            </Zooms>
-          </div>
+
+        <div className="div1" id="divi">
+          linear
         </div>
+        <br></br>
+        <div className="div2" id="divi">
+          ease
+        </div>
+        <br></br>
+        <div className="div3" id="divi">
+          ease-in
+        </div>
+        <br></br>
+        <div className="div4" id="divi">
+          ease-out
+        </div>
+        <br></br>
+        <div className="div5" id="divi">
+          ease-in-out
+        </div>
+        <br></br>
       </div>
     </div>
   );

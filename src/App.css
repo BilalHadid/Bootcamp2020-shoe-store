@@ -63,3 +63,33 @@
   align-items: flex-start;
   justify-content: space-around;
 }
+#divi {
+  width: 50%;
+  height: 50vh;
+  background-color: red;
+  transition: height 2s;
+
+  transition: width 2s;
+  display: flex;
+  flex-direction: row;
+}
+.div1 img {
+  transition-timing-function: linear;
+}
+.div2 {
+  transition-timing-function: ease;
+}
+.div3 {
+  transition-timing-function: ease-in;
+}
+.div4 {
+  transition-timing-function: ease-out;
+}
+.div5 {
+  transition-timing-function: ease-in-out;
+}
+
+#divi:hover {
+  height: 50vh;
+  width: 100%;
+}
