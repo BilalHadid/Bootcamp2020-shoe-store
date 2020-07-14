@@ -15,6 +15,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import HomeIcon from "@material-ui/icons/Home";
 import Button from "@material-ui/core/Button";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Routes, Route, useNavigate } from "react-router";
 import { Cards } from "./card";
 import { Home } from "./Home";
@@ -89,6 +90,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
+  },
+  badge: {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: "0 4px",
   },
 }));
 
@@ -200,7 +207,7 @@ export default function Navbar() {
   return (
     <div className={classes.grow}>
       <AppBar position="static">
-        <Toolbar style={{ backgroundColor: "#223565" }}>
+        <Toolbar style={{ backgroundColor: "#2E322E" }}>
           <Typography className={classes.title} variant="button" noWrap>
             Shoe Store
           </Typography>
@@ -233,16 +240,6 @@ export default function Navbar() {
               variant="text"
               color="primary"
               className={classes.button}
-              startIcon={<MailIcon />}
-              onClick={() => Navigate("/home")}
-            >
-              Rs 0.00
-            </Button>
-
-            <Button
-              variant="text"
-              color="primary"
-              className={classes.button}
               startIcon={<NotificationsIcon />}
               onClick={() => Navigate("/products")}
             >
@@ -257,6 +254,15 @@ export default function Navbar() {
             >
               Find A Store
             </Button>
+            <IconButton
+              color="inherit"
+              aria-label="cart"
+              onClick={() => Navigate("/home")}
+            >
+              <Badge color="secondary" badgeContent={2} showZero>
+                <ShoppingCartIcon />
+              </Badge>
+            </IconButton>
             <IconButton
               badgeContent={4}
               edge="end"
