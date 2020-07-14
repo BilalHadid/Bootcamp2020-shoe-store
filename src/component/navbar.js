@@ -259,7 +259,7 @@ export default function Navbar() {
               aria-label="cart"
               onClick={() => Navigate("/home")}
             >
-              <Badge color="secondary" badgeContent={2} showZero>
+              <Badge color="secondary" badgeContent={2}>
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>

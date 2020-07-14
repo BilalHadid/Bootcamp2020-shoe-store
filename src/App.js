@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./component/navbar";
+import { DataProvider } from "./component/context";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-    </div>
+    <DataProvider>
+      <div className="App">
+        <Navbar />
+      </div>
+    </DataProvider>
   );
 }
 
