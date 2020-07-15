@@ -177,18 +177,18 @@ export default function Navbar() {
         >
           Products
         </Button>
-        {/* 3rd */}
-        <MenuItem>
-          <Button
-            variant="text"
-            color="primary"
-            className={classes.Mobilebutton}
-            startIcon={<MailIcon />}
-            onClick={() => Navigate("/contact")}
-          >
-            Contact
-          </Button>
-        </MenuItem>
+      </MenuItem>
+      {/* 3rd */}
+      <MenuItem>
+        <Button
+          variant="text"
+          color="primary"
+          className={classes.Mobilebutton}
+          startIcon={<MailIcon />}
+          onClick={() => Navigate("/contact")}
+        >
+          Contact
+        </Button>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
