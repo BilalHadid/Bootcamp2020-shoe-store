@@ -128,7 +128,7 @@ const shoes = [
     Rs: "9.99",
   },
 ];
-export const Details = () => {
+export const Details = ({ pass }) => {
   const classes = useStyles();
   let { id } = useParams();
   let shoe = shoes[id];

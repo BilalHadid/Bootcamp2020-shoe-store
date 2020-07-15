@@ -21,7 +21,6 @@ import { Cards } from "./card";
 import { Home } from "./Home";
 import SignInSide from "./SignIn";
 import { Details } from "./details";
-import { Cart } from "./Cart";
 import ContactsIcon from "@material-ui/icons/Contacts";
 import { Contact } from "./Contact";
 
@@ -258,11 +257,7 @@ export default function Navbar() {
             >
               Contact
             </Button>
-            <IconButton
-              color="inherit"
-              aria-label="cart"
-              onClick={() => Navigate("/cart")}
-            >
+            <IconButton color="inherit" aria-label="cart">
               <Badge color="secondary" badgeContent={2}>
                 <ShoppingCartIcon />
               </Badge>
@@ -301,7 +296,6 @@ export default function Navbar() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Cards />} />
         <Route path="/products/:id" element={<Details />} />
-        <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/signin" element={<SignInSide />} />

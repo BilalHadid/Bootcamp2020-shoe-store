@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { DataContext } from "./context";
+
 import "../App.css";
 
 export class Cards extends Component {
@@ -9,6 +10,7 @@ export class Cards extends Component {
 
   render() {
     const { shoes } = this.context;
+
     return (
       <div id="product">
         {shoes.map((shoe) => (
