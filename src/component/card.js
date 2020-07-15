@@ -22,7 +22,7 @@ export class Cards extends Component {
               </h3>
               <span>{shoe.Rs}$</span>
               <br></br>
-              <Button variant="contained" color="secondary">
+              <Button variant="contained" color="inherit">
                 ADD TO CART
               </Button>
             </div>

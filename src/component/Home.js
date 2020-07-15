@@ -9,6 +9,7 @@ import img4 from "./images/img4.jpeg";
 import img5 from "./images/backImg.jpg";
 import img6 from "./images/img5.jpg";
 import { makeStyles } from "@material-ui/core/styles";
+import { useNavigate } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -62,6 +63,7 @@ const zoomOutProperties = {
 const images = [img1, img2, img3, img4, img5, img6];
 export const Home = () => {
   const classes = useStyles();
+  const Navigate = useNavigate();
   return (
     <div>
       <div className="slide-container">
@@ -78,7 +80,7 @@ export const Home = () => {
       </div>
       <div className="cardGender">
         <Card className={classes.root}>
-          <CardActionArea>
+          <CardActionArea onClick={() => Navigate("/products")}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 MEN
@@ -93,7 +95,7 @@ export const Home = () => {
         </Card>
         {/* 2nd */}
         <Card className={classes.root}>
-          <CardActionArea>
+          <CardActionArea onClick={() => Navigate("/products")}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 WOMEN
@@ -108,7 +110,7 @@ export const Home = () => {
         </Card>
         {/* 3rd */}
         <Card className={classes.root}>
-          <CardActionArea>
+          <CardActionArea onClick={() => Navigate("/products")}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 KIDS

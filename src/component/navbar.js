@@ -11,7 +11,7 @@ import Badge from "@material-ui/core/Badge";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/LocalMall";
-import NotificationsIcon from "@material-ui/icons/Notifications";
+import NotificationsIcon from "@material-ui/icons/Storefront";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import HomeIcon from "@material-ui/icons/Home";
 import Button from "@material-ui/core/Button";
@@ -20,6 +20,10 @@ import { Routes, Route, useNavigate } from "react-router";
 import { Cards } from "./card";
 import { Home } from "./Home";
 import SignInSide from "./SignIn";
+import { Details } from "./details";
+import { Cart } from "./Cart";
+import ContactsIcon from "@material-ui/icons/Contacts";
+import { Contact } from "./Contact";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -162,18 +166,6 @@ export default function Navbar() {
           Home
         </Button>
       </MenuItem>
-      {/* 3rd */}
-      <MenuItem>
-        <Button
-          variant="text"
-          color="primary"
-          className={classes.Mobilebutton}
-          startIcon={<MailIcon />}
-          onClick={() => Navigate("/home")}
-        >
-          My Card
-        </Button>
-      </MenuItem>
 
       <MenuItem>
         <Button
@@ -186,6 +178,18 @@ export default function Navbar() {
         >
           Products
         </Button>
+        {/* 3rd */}
+        <MenuItem>
+          <Button
+            variant="text"
+            color="primary"
+            className={classes.Mobilebutton}
+            startIcon={<MailIcon />}
+            onClick={() => Navigate("/contact")}
+          >
+            Contact
+          </Button>
+        </MenuItem>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -249,15 +253,15 @@ export default function Navbar() {
               variant="text"
               color="primary"
               className={classes.button}
-              startIcon={<HomeIcon />}
-              onClick={() => Navigate("/")}
+              startIcon={<ContactsIcon />}
+              onClick={() => Navigate("/contact")}
             >
-              Find A Store
+              Contact
             </Button>
             <IconButton
               color="inherit"
               aria-label="cart"
-              onClick={() => Navigate("/home")}
+              onClick={() => Navigate("/cart")}
             >
               <Badge color="secondary" badgeContent={2}>
                 <ShoppingCartIcon />
@@ -296,6 +300,9 @@ export default function Navbar() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Cards />} />
+        <Route path="/products/:id" element={<Details />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/signin" element={<SignInSide />} />
       </Routes>
