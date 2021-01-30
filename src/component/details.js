@@ -23,7 +23,7 @@ const shoes = [
     id: 1,
     name: "VALOUR BLUE",
     img:
-      "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/828-8030-_2_360x.jpg?v=1591259697",
+      "https://i.pinimg.com/564x/d8/17/03/d817039e2f4ca479d8fe009850843ef9.jpg",
     descrip:
       "2020 New Design Summer Breathable Nylon Mesh Men Shoes Sneaker Sport Shoes Casual Shoes",
     Rs: "9.99",
@@ -32,7 +32,7 @@ const shoes = [
     id: 2,
     name: "JORDAN MARS 270 LONDON",
     img:
-      "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/828-2030-_2_360x.jpg?v=1591259658",
+      "https://i.pinimg.com/564x/0e/a6/e3/0ea6e3c04993113c8a04f9ce61c6b6ff.jpg",
     descrip:
       "2020 New Design Summer Breathable Nylon Mesh Men Shoes Sneaker Sport Shoes Casual Shoes",
     Rs: "9.99",
@@ -67,7 +67,7 @@ const shoes = [
     id: 6,
     name: "Running Shoe",
     img:
-      "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/428-9025-_1_360x.jpg?v=1591258447",
+      "https://i.pinimg.com/564x/b2/ea/3d/b2ea3d8872fa4c9e6cfae5d2b2fb5e62.jpg",
     descrip:
       "2020 New Design Summer Breathable Nylon Mesh Men Shoes Sneaker Sport Shoes Casual Shoes",
     Rs: "9.99",
@@ -86,7 +86,7 @@ const shoes = [
     id: 8,
     name: "JORDAN MARS 270 LONDON",
     img:
-      "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/881-2175-_2_360x.jpg?v=1591879104",
+      "https://i.pinimg.com/564x/d8/17/03/d817039e2f4ca479d8fe009850843ef9.jpg",
     descrip:
       "2020 New Design Summer Breathable Nylon Mesh Men Shoes Sneaker Sport Shoes Casual Shoes",
     Rs: "9.99",
@@ -95,7 +95,7 @@ const shoes = [
     id: 9,
     name: "RACER BLUE",
     img:
-      "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/851-1251-c_360x.JPG?v=1573496007",
+      "https://i.pinimg.com/564x/ef/47/15/ef4715083cad0521c6e5994addf3be6c.jpg",
     descrip:
       "2020 New Design Summer Breathable Nylon Mesh Men Shoes Sneaker Sport Shoes Casual Shoes",
     Rs: "9.99",
@@ -104,7 +104,7 @@ const shoes = [
     id: 10,
     name: "RACER BLUE",
     img:
-      "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/851-9255-b_360x.jpg?v=1574316425",
+      "https://i.pinimg.com/564x/e5/9b/56/e59b5683c712cbb82365dfdc35a3b1bc.jpg",
     descrip:
       "2020 New Design Summer Breathable Nylon Mesh Men Shoes Sneaker Sport Shoes Casual Shoes",
     Rs: "9.99",
@@ -122,7 +122,7 @@ const shoes = [
     id: 12,
     name: "Running Shoe",
     img:
-      "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/428-9025-_1_360x.jpg?v=1591258447",
+      "https://i.pinimg.com/564x/8d/47/45/8d47453d4674f0ff681db1c3f7c4f2af.jpg",
     descrip:
       "2020 New Design Summer Breathable Nylon Mesh Men Shoes Sneaker Sport Shoes Casual Shoes",
     Rs: "9.99",
